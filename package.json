@@ -1,0 +1,24 @@
+{
+  "name": "msw-node-fetch-native",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=7"
+  },
+  "scripts": {
+    "test": "tsx index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "msw": "^0.44.2",
+    "tsx": "^3.8.0"
+  },
+  "dependencies": {
+    "ky": "^0.31.0",
+    "node-fetch": "^3.2.9"
+  }
+}
