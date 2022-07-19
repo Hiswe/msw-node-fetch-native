@@ -1,3 +1,4 @@
+import consola from 'consola';
 import { setupServer } from "msw/node";
 import { rest } from "msw";
 import ky from "ky"
@@ -6,7 +7,7 @@ import fetch from "node-fetch";
 const TEST_URL = `http://localhost/test`;
 const handlers = [
   rest.get(TEST_URL, (req, res, ctx) => {
-    return res(ctx.status(200), ctx.json({ ok: true }));
+    return res(ctx.status(200), ctx.json({ test: true }));
   }),
 ];
 const server = setupServer(...handlers);
@@ -15,31 +16,31 @@ const server = setupServer(...handlers);
   server.listen({ onUnhandledRequest: "error" });
   // Native fetch
   try {
-    console.log(`Native Fetch`)
+    consola.info(`Native Fetch`)
     const res = await globalThis.fetch(TEST_URL);
     const json = await res.json();
-    console.log({ json });
+    consola.success( json );
   } catch (error) {
-    console.log(`Native Fetch failed`)
+    consola.error(`Native Fetch failed`)
     console.log(error);
   }
   // Ky
   try {
-    console.log(`Ky`)
-    const json = await ky(TEST_URL);
-    console.log({ json });
+    consola.info(`Ky`)
+    const json = await ky(TEST_URL).json();
+    consola.success( json );
   } catch (error) {
-    console.log(`ky failed`)
+    consola.error(`ky failed`)
     console.log(error);
   }
   // node-fetch
   try {
-    console.log(`node-fetch`)
+    consola.info(`node-fetch`)
     const res = await fetch(TEST_URL);
     const json = await res.json();
-    console.log({ json });
+    consola.success( json );
   } catch (error) {
-    console.log(`node-fetch failed`)
+    consola.error(`node-fetch failed`)
     console.log(error);
   }
   server.close();
