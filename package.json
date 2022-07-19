@@ -8,14 +8,17 @@
     "pnpm": ">=7"
   },
   "scripts": {
-    "test": "tsx index.ts"
+    "test": "tsx index.ts",
+    "test:undici": "tsx undici.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "consola": "^2.15.3",
     "msw": "^0.44.2",
-    "tsx": "^3.8.0"
+    "tsx": "^3.8.0",
+    "undici": "^5.8.0"
   },
   "dependencies": {
     "ky": "^0.31.0",

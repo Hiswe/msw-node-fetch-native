@@ -1,18 +1,22 @@
 lockfileVersion: 5.4
 
 specifiers:
+  consola: ^2.15.3
   ky: ^0.31.0
   msw: ^0.44.2
   node-fetch: ^3.2.9
   tsx: ^3.8.0
+  undici: ^5.8.0
 
 dependencies:
   ky: 0.31.0
   node-fetch: 3.2.9
 
 devDependencies:
+  consola: 2.15.3
   msw: 0.44.2
   tsx: 3.8.0
+  undici: 5.8.0
 
 packages:
 
@@ -244,6 +248,10 @@ packages:
 
   /color-name/1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+    dev: true
+
+  /consola/2.15.3:
+    resolution: {integrity: sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==}
     dev: true
 
   /cookie/0.4.2:
@@ -1234,6 +1242,11 @@ packages:
       has-bigints: 1.0.2
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
+    dev: true
+
+  /undici/5.8.0:
+    resolution: {integrity: sha512-1F7Vtcez5w/LwH2G2tGnFIihuWUlc58YidwLiCv+jR2Z50x0tNXpRRw7eOIJ+GvqCqIkg9SB7NWAJ/T9TLfv8Q==}
+    engines: {node: '>=12.18'}
     dev: true
 
   /util-deprecate/1.0.2:
